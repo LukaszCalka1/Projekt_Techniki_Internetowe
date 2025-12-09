@@ -1,0 +1,754 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta chasrset="UTF-8">
+    <title>Pizza</title>
+
+    <style>
+        .main {
+            display: flex;
+            float: left;
+            width: 75%;
+            background-color: rgb(255, 136, 156);
+            border-radius: 20px;
+            flex-direction: column;
+            min-width: 1000px;
+        }
+
+        .koszyk {
+            display: flex;
+            float: right;
+            background-color: rgba(0, 0, 255, 0);
+            width: 25%;
+            flex-direction: column;
+        }
+
+        .nag {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .nagtext {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .pizza {
+            display: flex;
+            width: 100%;
+            margin-left: 15px;
+        }
+
+        .pizza img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+            margin-right: 15px;
+        }
+
+        .pizza p {
+            font-size: 25px;
+            margin-top: 55px;
+            margin-right: 15px;
+        }
+
+        .ser_mar {
+            border-radius: 12px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            margin-top: 59px;
+            border: 2px solid black;
+            margin-right: 15px;
+        }
+
+        .ser_pep {
+            border-radius: 12px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            margin-top: 59px;
+            border: 2px solid black;
+            margin-right: 15px;
+        }
+
+        .ser_cap {
+            border-radius: 12px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            margin-top: 59px;
+            border: 2px solid black;
+            margin-right: 15px;
+        }
+
+        .ser_gre {
+            border-radius: 12px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            margin-top: 59px;
+            border: 2px solid black;
+            margin-right: 15px;
+        }
+
+        .ser_kur {
+            border-radius: 12px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            margin-top: 59px;
+            border: 2px solid black;
+            margin-right: 15px;
+        }
+
+        .mar,
+        .pep,
+        .cap,
+        .gre,
+        .kur,
+        .rol,
+        .pie,
+        .pepsi,
+        .up {
+            padding-left: 3px;
+            border-radius: 12px;
+            font-size: 25px;
+            width: 185px;
+            height: 30px;
+            background-color: white;
+            margin-top: 56px;
+            border: 2px solid black;
+        }
+
+        .h :hover {
+            background-color: #faa02a;
+        }
+
+        h1 {
+            margin-top: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+
+        }
+
+        .tabela {
+            display: flex;
+            float: left;
+        }
+
+        .tabela table {
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .tabela table td {
+            width: 33%;
+        }
+
+        .kwota {
+            font-weight: bold;
+        }
+
+        .reset {
+            padding-left: 3px;
+            border-radius: 12px;
+            width: 70px;
+            background-color: white;
+            margin-top: 25px;
+            border: 2px solid black;
+        }
+
+        .hr :hover {
+            background-color: #ff2f20f5;
+        }
+
+        @media (max-width:1500px) {
+            .koszyk {
+                display: flex;
+                float: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="nag">
+            <div class="nagtext">PIZZA</div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 23px;">Margherita</p><img src="pizza_margherita.jpg">
+            <p>cena 40zł</p>
+            <p>dodatkowy ser (+2zł)</p>
+            <div class="ser_mar"></div>
+            <div class="h">
+                <div class="mar">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 32px;">Pepperoni</p><img src="pizza_pepperoni.jpg">
+            <p>cena 42zł</p>
+            <p>dodatkowy ser (+2zł)</p>
+            <div class="ser_pep"></div>
+            <div class="h">
+                <div class="pep">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 15px;">Capricciosa</p><img src="pizza_capricciosa.jpg">
+            <p>cena 45zł</p>
+            <p>dodatkowy ser (+2zł)</p>
+            <div class="ser_cap"></div>
+            <div class="h">
+                <div class="cap">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 60px;">Grecka</p><img src="pizza_grecka.jpg">
+            <p>cena 46zł</p>
+            <p>dodatkowy ser (+2zł)</p>
+            <div class="ser_gre"></div>
+            <div class="h">
+                <div class="gre">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 47px;">Kurczak</p><img src="pizza_kurczak.jpg">
+            <p>cena 47zł</p>
+            <p>dodatkowy ser (+2zł)</p>
+            <div class="ser_kur"></div>
+            <div class="h">
+                <div class="kur">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 72px;">Rolsy</p><img src="rolsy.jpg">
+            <p>cena 9zł</p>
+            <div class="h">
+                <div class="rol">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 33px;">Pieczywo</p><img src="pieczywo.jpg">
+            <p>cena 8zł</p>
+            <div class="h">
+                <div class="pie">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 32px;">Pepsi 0.3l</p><img src="pepsi.jpg">
+            <p>cena 7zł</p>
+            <div class="h">
+                <div class="pepsi">Dodaj do koszyka</div>
+            </div>
+        </div>
+        <div class="pizza">
+            <p style="margin-right: 49px;">7up 0.3l</p><img src="7up.jpg">
+            <p>cena 7zł</p>
+            <div class="h">
+                <div class="up">Dodaj do koszyka</div>
+            </div>
+        </div>
+    </div>
+    <div class="koszyk">
+        <h1>KOSZYK</h1>
+        <div class="tabela">
+            <table>
+                <tr>
+                    <td>Produkt</td>
+                    <td>Ilość</td>
+                    <td>Cena</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k1p"></div>
+                    </td>
+                    <td>
+                        <div id="k1i"></div>
+                    </td>
+                    <td>
+                        <div id="k1c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k2p"></div>
+                    </td>
+                    <td>
+                        <div id="k2i"></div>
+                    </td>
+                    <td>
+                        <div id="k2c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k3p"></div>
+                    </td>
+                    <td>
+                        <div id="k3i"></div>
+                    </td>
+                    <td>
+                        <div id="k3c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k4p"></div>
+                    </td>
+                    <td>
+                        <div id="k4i"></div>
+                    </td>
+                    <td>
+                        <div id="k4c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k5p"></div>
+                    </td>
+                    <td>
+                        <div id="k5i"></div>
+                    </td>
+                    <td>
+                        <div id="k5c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k6p"></div>
+                    </td>
+                    <td>
+                        <div id="k6i"></div>
+                    </td>
+                    <td>
+                        <div id="k6c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k7p"></div>
+                    </td>
+                    <td>
+                        <div id="k7i"></div>
+                    </td>
+                    <td>
+                        <div id="k7c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k8p"></div>
+                    </td>
+                    <td>
+                        <div id="k8i"></div>
+                    </td>
+                    <td>
+                        <div id="k8c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="k9p"></div>
+                    </td>
+                    <td>
+                        <div id="k9i"></div>
+                    </td>
+                    <td>
+                        <div id="k9c"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="kwota">Suma:</div>
+                    </td>
+                    <td>
+                        <div class="kwota" id="suma"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="hr">
+                            <div class="reset">Wyczyść</div>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        var sm = 0;
+        var sp = 0;
+        var sc = 0;
+        var sg = 0;
+        var sk = 0;
+        var licznik = 1;
+        var suma = 0;
+        var mar = "Margherita"
+        var mar_pozycja = 0;
+        var mar_ilosc = 0;
+        var mar_cena = 0;
+        var pep = "Pepperoni"
+        var pep_pozycja = 0;
+        var pep_ilosc = 0;
+        var pep_cena = 0;
+        var cap = "Capricciosa"
+        var cap_pozycja = 0;
+        var cap_ilosc = 0;
+        var cap_cena = 0;
+        var gre = "Grecka"
+        var gre_pozycja = 0;
+        var gre_ilosc = 0;
+        var gre_cena = 0;
+        var kur = "Kurczak"
+        var kur_pozycja = 0;
+        var kur_ilosc = 0;
+        var kur_cena = 0;
+        var rol = "Rolsy"
+        var rol_pozycja = 0;
+        var rol_ilosc = 0;
+        var rol_cena = 0;
+        var pie = "Pieczywo"
+        var pie_pozycja = 0;
+        var pie_ilosc = 0;
+        var pie_cena = 0;
+        var pepsi = "Pepsi 0.3l"
+        var pepsi_pozycja = 0;
+        var pepsi_ilosc = 0;
+        var pepsi_cena = 0;
+        var up = "7up 0.3l"
+        var up_pozycja = 0;
+        var up_ilosc = 0;
+        var up_cena = 0;
+
+
+        document.querySelector(".ser_mar").addEventListener("click", function () {
+
+            let d1 = document.querySelector('.ser_mar');
+            if (sm == 0) {
+                d1.style.backgroundColor = "rgb(44, 190, 0)";
+                sm = 1;
+            } else {
+                d1.style.backgroundColor = "white";
+                sm = 0;
+            }
+        });
+        document.querySelector(".ser_pep").addEventListener("click", function () {
+
+            let d1 = document.querySelector('.ser_pep');
+            if (sp == 0) {
+                d1.style.backgroundColor = "rgb(44, 190, 0)";
+                sp = 1;
+            } else {
+                d1.style.backgroundColor = "white";
+                sp = 0;
+            }
+        });
+        document.querySelector(".ser_cap").addEventListener("click", function () {
+
+            let d1 = document.querySelector('.ser_cap');
+            if (sc == 0) {
+                d1.style.backgroundColor = "rgb(44, 190, 0)";
+                sc = 1;
+            } else {
+                d1.style.backgroundColor = "white";
+                sc = 0;
+            }
+        });
+        document.querySelector(".ser_gre").addEventListener("click", function () {
+
+            let d1 = document.querySelector('.ser_gre');
+            if (sg == 0) {
+                d1.style.backgroundColor = "rgb(44, 190, 0)";
+                sg = 1;
+            } else {
+                d1.style.backgroundColor = "white";
+                sg = 0;
+            }
+        });
+        document.querySelector(".ser_kur").addEventListener("click", function () {
+
+            let d1 = document.querySelector('.ser_kur');
+            if (sk == 0) {
+                d1.style.backgroundColor = "rgb(44, 190, 0)";
+                sk = 1;
+            } else {
+                d1.style.backgroundColor = "white";
+                sk = 0;
+            }
+        });
+
+        document.querySelector(".mar").addEventListener("click", function () {
+            if (mar_pozycja == 0) {
+                if (sm == 1) {
+                    mar_cena = 42;
+                    suma = suma + 42;
+                } else {
+                    mar_cena = 40;
+                    suma = suma + 40;
+                }
+                mar_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = mar;
+                document.getElementById("k" + licznik + "i").innerHTML = mar_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = mar_cena;
+                document.getElementById("suma").innerHTML = suma;
+                mar_pozycja = licznik;
+                licznik++;
+            } else {
+                if (sm == 1) {
+                    mar_cena = mar_cena + 42;
+                    suma = suma + 42;
+                } else {
+                    mar_cena = mar_cena + 40;
+                    suma = suma + 40;
+                }
+                mar_ilosc++;
+                document.getElementById("k" + mar_pozycja + "p").innerHTML = mar;
+                document.getElementById("k" + mar_pozycja + "i").innerHTML = mar_ilosc;
+                document.getElementById("k" + mar_pozycja + "c").innerHTML = mar_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".pep").addEventListener("click", function () {
+            if (pep_pozycja == 0) {
+                if (sp == 1) {
+                    pep_cena = 44;
+                    suma = suma + 44;
+                } else {
+                    pep_cena = 42;
+                    suma = suma + 42;
+                }
+                pep_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = pep;
+                document.getElementById("k" + licznik + "i").innerHTML = pep_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = pep_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                pep_pozycja = licznik;
+                licznik++;
+            } else {
+                if (sp == 1) {
+                    pep_cena = pep_cena + 44
+                    suma = suma + 44;
+                } else {
+                    pep_cena = pep_cena + 42;
+                    suma = suma + 42;
+                }
+                pep_ilosc++;
+                document.getElementById("k" + pep_pozycja + "p").innerHTML = pep;
+                document.getElementById("k" + pep_pozycja + "i").innerHTML = pep_ilosc;
+                document.getElementById("k" + pep_pozycja + "c").innerHTML = pep_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+
+        document.querySelector(".cap").addEventListener("click", function () {
+            if (cap_pozycja == 0) {
+                if (sc == 1) {
+                    cap_cena = 47;
+                    suma = suma + 47;
+                } else {
+                    cap_cena = 45;
+                    suma = suma + 45;
+                }
+                cap_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = cap;
+                document.getElementById("k" + licznik + "i").innerHTML = cap_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = cap_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                cap_pozycja = licznik;
+                licznik++;
+            } else {
+                if (sc == 1) {
+                    cap_cena = cap_cena + 47;
+                    suma = suma + 47;
+                } else {
+                    cap_cena = cap_cena + 45;
+                    suma = suma + 45;
+                }
+                cap_ilosc++;
+                document.getElementById("k" + cap_pozycja + "p").innerHTML = cap;
+                document.getElementById("k" + cap_pozycja + "i").innerHTML = cap_ilosc;
+                document.getElementById("k" + cap_pozycja + "c").innerHTML = cap_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".gre").addEventListener("click", function () {
+            if (gre_pozycja == 0) {
+                if (sg == 1) {
+                    gre_cena = 48;
+                    suma = suma + 48;
+                } else {
+                    gre_cena = 46;
+                    suma = suma + 46;
+                }
+                gre_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = gre;
+                document.getElementById("k" + licznik + "i").innerHTML = gre_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = gre_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                gre_pozycja = licznik;
+                licznik++;
+            } else {
+                if (sg == 1) {
+                    gre_cena = gre_cena + 48;
+                    suma = suma + 48;
+                } else {
+                    gre_cena = gre_cena + 46;
+                    suma = suma + 46;
+                }
+                gre_ilosc++;
+                document.getElementById("k" + gre_pozycja + "p").innerHTML = gre;
+                document.getElementById("k" + gre_pozycja + "i").innerHTML = gre_ilosc;
+                document.getElementById("k" + gre_pozycja + "c").innerHTML = gre_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".kur").addEventListener("click", function () {
+            if (kur_pozycja == 0) {
+                if (sk == 1) {
+                    kur_cena = 49;
+                    suma = suma + 49;
+                } else {
+                    kur_cena = 47;
+                    suma = suma + 47;
+                }
+                kur_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = kur;
+                document.getElementById("k" + licznik + "i").innerHTML = kur_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = kur_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                kur_pozycja = licznik;
+                licznik++;
+            } else {
+                if (sk == 1) {
+                    kur_cena = kur_cena + 49;
+                    suma = suma + 49;
+                } else {
+                    kur_cena = kur_cena + 47;
+                    suma = suma + 47;
+                }
+                kur_ilosc++;
+                document.getElementById("k" + kur_pozycja + "p").innerHTML = kur;
+                document.getElementById("k" + kur_pozycja + "i").innerHTML = kur_ilosc;
+                document.getElementById("k" + kur_pozycja + "c").innerHTML = kur_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".rol").addEventListener("click", function () {
+            if (rol_pozycja == 0) {
+                rol_cena = 9;
+                suma = suma + 9;
+                rol_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = rol;
+                document.getElementById("k" + licznik + "i").innerHTML = rol_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = rol_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                rol_pozycja = licznik;
+                licznik++;
+            } else {
+                rol_cena = rol_cena + 9;
+                suma = suma + 9;
+                rol_ilosc++;
+                document.getElementById("k" + rol_pozycja + "p").innerHTML = rol;
+                document.getElementById("k" + rol_pozycja + "i").innerHTML = rol_ilosc;
+                document.getElementById("k" + rol_pozycja + "c").innerHTML = rol_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".pie").addEventListener("click", function () {
+            if (pie_pozycja == 0) {
+                pie_cena = 8;
+                suma = suma + 8;
+                pie_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = pie;
+                document.getElementById("k" + licznik + "i").innerHTML = pie_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = pie_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                pie_pozycja = licznik;
+                licznik++;
+            } else {
+                pie_cena = pie_cena + 8;
+                suma = suma + 8;
+                pie_ilosc++;
+                document.getElementById("k" + pie_pozycja + "p").innerHTML = pie;
+                document.getElementById("k" + pie_pozycja + "i").innerHTML = pie_ilosc;
+                document.getElementById("k" + pie_pozycja + "c").innerHTML = pie_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".pepsi").addEventListener("click", function () {
+            if (pepsi_pozycja == 0) {
+                pepsi_cena = 7;
+                suma = suma + 7;
+                pepsi_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = pepsi;
+                document.getElementById("k" + licznik + "i").innerHTML = pepsi_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = pepsi_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                pepsi_pozycja = licznik;
+                licznik++;
+            } else {
+                pepsi_cena = pepsi_cena + 7;
+                suma = suma + 7;
+                pepsi_ilosc++;
+                document.getElementById("k" + pepsi_pozycja + "p").innerHTML = pepsi;
+                document.getElementById("k" + pepsi_pozycja + "i").innerHTML = pepsi_ilosc;
+                document.getElementById("k" + pepsi_pozycja + "c").innerHTML = pepsi_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        });
+        document.querySelector(".up").addEventListener("click", function () {
+            if (up_pozycja == 0) {
+                up_cena = 7;
+                suma = suma + 7;
+                up_ilosc++;
+                document.getElementById("k" + licznik + "p").innerHTML = up;
+                document.getElementById("k" + licznik + "i").innerHTML = up_ilosc;
+                document.getElementById("k" + licznik + "c").innerHTML = up_cena;
+                document.getElementById("suma").innerHTML = suma;
+
+                up_pozycja = licznik;
+                licznik++;
+            } else {
+                up_cena = up_cena + 7;
+                suma = suma + 7;
+                up_ilosc++;
+                document.getElementById("k" + up_pozycja + "p").innerHTML = up;
+                document.getElementById("k" + up_pozycja + "i").innerHTML = up_ilosc;
+                document.getElementById("k" + up_pozycja + "c").innerHTML = up_cena;
+                document.getElementById("suma").innerHTML = suma;
+            }
+        })
+        document.querySelector(".reset").addEventListener("click", function () {
+            location.reload();
+        });
+
+    </script>
+</body>
+
+</html>
