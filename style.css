@@ -47,11 +47,13 @@
     justify-content: center;
     align-items: center;
     height: 200px;        
-   background: radial-gradient(
+    background: radial-gradient(
         circle at center,
         #ed1b24 70%,
         #880016 90%
     );
+    text-align: center;
+    padding: 0 20px;
 }
 
 .name h1 {
@@ -59,6 +61,7 @@
     font-size: 56px;
     color: #fff;
     letter-spacing: 2px;
+    white-space: nowrap; 
 }
 
 .subtitle {
@@ -93,6 +96,9 @@
     background-color: #ed1b24;
     padding: 6px 30px;
     text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .about-title h2 {
@@ -105,6 +111,11 @@
 
 .about-content {
     padding: 30px;
+}
+
+.icon-img {
+    width: 28px;             
+    height: 28px;
 }
 
 /* PANELE */
@@ -140,4 +151,72 @@
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+    .panels {
+        display: flex;
+        flex-wrap: wrap;           
+        justify-content: center;   
+        gap: 20px;
+}
+
+    .panel {
+        flex: 1 1 50%;             
+        max-width: 300px;          
+}
+}
+
+
+@media only screen and (max-width: 800px) {
+
+     .menu{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .menu ul {
+        flex-direction: column;   
+        gap: 0;                       
+        align-items: stretch;           
+    }
+
+     .menu li {
+        text-align: center;             
+        border-bottom: 1px solid #000;  
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+   
+
+    .name {
+        height: 180px;  /* trochę mniej miejsca potrzebne */
+    }
+
+    .name h1 {
+        font-size: 32px;   /* mniejsza czcionka */
+    }
+
+    .subtitle{
+        font-size: 12px;
+    }
+
+  .panels {
+        flex-direction: column;  
+        gap: 15px;               
+        align-items: center;     
+    }
+
+    .panel {
+        width: 80%;              
+        max-width: 300px;        
+    }
 }
