@@ -85,73 +85,6 @@
     );
 }
 
-/* O NAS */
-.about {
-    max-width: 800px;
-    margin: 60px auto 20px;
-    border: 2px solid #ddd;
-}
-
-
-.about-title {
-    background-color: #ed1b24;
-    padding: 6px 30px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.about-title h2 {
-    margin: 0;
-    color: #fff;
-    letter-spacing: 1px;
-    font-size: 16px;
-}
-
-.about-content {
-    padding: 30px;
-}
-
-.icon-img {
-    width: 28px;             
-    height: 28px;
-}
-
-/* PANELE */
-.panels {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-    flex-wrap: wrap;   /* <-- bardzo ważne */
-}
-
-.panel {
-    width: 200px;
-    height: 120px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid #b22222;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.panel:hover {
-    background-color: #b22222;
-    color: white;
-}
-
-.stopka{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
 
 /* DOSTAWA */
 .delivery {
@@ -162,6 +95,8 @@
     padding: 5px 10px 5px 10px;
     gap: 12px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 .delivery-option {
     width: 120px;
@@ -184,20 +119,130 @@
     padding: 5px 0px 5px;
 }
 
-
-/* --- RESET I PODSTAWY --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/*pojemnik na dostawe i koszyk*/
+.box{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+.koszyk {
+    flex: 1 1 25%;             
+    background-color: rgba(136, 0, 22, 0.05);
+    padding: 20px;
+    min-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- KONTAINER CAŁOŚCI --- */
+.koszyk h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #880016;
+    font-size: 30px;
+    opacity: 0.75;
+}
+
+.tabela table {
+    width: 100%;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+.tabela table td {
+    width: 33%;
+    padding: 5px;
+}
+
+.tabela table tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela table tr td div {
+    padding: 5px 10px;                  /* trochę więcej miejsca */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* widoczne tło */
+    text-align: center;                  /* centrowanie zawartości */
+    border-bottom: 1px solid #ddd;
+}
+
+
+.kwota {
+    font-weight: bold;
+    color: #ed1b24;  
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.hr{
+    display: block;
+    width: 200px;
+}
+
+.przycisk {
+    display: block;
+    padding-left: 3px;
+    border-radius: 12px;
+    width: 100%;
+    background-color: white;
+    margin-top: 25px;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hr:hover .przycisk {
+    background-color: #880016;
+    color: #fff;
+}
+
+
+
+/* PANELE */
+.panels {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 40px;
+    flex-wrap: wrap;   /* <-- bardzo ważne */
+}
+
+.panel {
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #880016;
+    border-right: None;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.panel:last-child{
+    border-right: 2px solid #880016;
+}
+
+.panel:hover {
+    background-color: #880016;
+    color: white;
+}
+
+.stopka{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+
 .container {
     display: flex;
     gap: 20px;                 /* odstęp między menu a koszykiem */
@@ -284,47 +329,4 @@ body {
     background-color: #faa02a;
 }
 
-/* --- KOSZYK --- */
-.koszyk {
-    flex: 1 1 25%;             /* 25% szerokości, może się zmniejszać */
-    background-color: rgba(0, 0, 255, 0); /* jeśli chcesz przezroczystość */
-    padding: 20px;
-    min-width: 250px;
-}
 
-.koszyk h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tabela table {
-    width: 100%;
-    font-size: 18px;
-    border-collapse: collapse;
-}
-
-.tabela table td {
-    width: 33%;
-    padding: 5px;
-}
-
-.kwota {
-    font-weight: bold;
-}
-
-.reset {
-    padding-left: 3px;
-    border-radius: 12px;
-    width: 70px;
-    background-color: white;
-    margin-top: 25px;
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.hr:hover .reset {
-    background-color: #ff2f20f5;
-}

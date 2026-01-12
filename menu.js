@@ -348,7 +348,7 @@
                 document.getElementById("suma").innerHTML = suma;
             }
         })
-        document.querySelector(".reset").addEventListener("click", function () {
+        document.querySelector(".przycisk").addEventListener("click", function () {
             location.reload();
         });
 
