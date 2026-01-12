@@ -124,7 +124,7 @@
     justify-content: center;
     gap: 20px;
     padding: 40px;
-    flex-wrap: wrap;   /* <-- bardzo ważne */
+    flex-wrap: wrap;   
 }
 
 .panel {
