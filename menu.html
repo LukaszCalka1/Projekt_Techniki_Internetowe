@@ -1,4 +1,78 @@
 <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzeria Napoli</title>
+
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.jpg">
+</head>
+<body>
+
+    <nav class="menu">  
+        <ul>
+            <li><a href="index.html">Start</a></li>
+            <li class="active"><a href="menu.html">Menu</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <header class="name">
+    <div>
+        <h1>Pizzeria Napoli</h1>
+        <p class="subtitle">Tradycyjna kuchnia włoska</p>
+    </div>
+    </header>
+    <div class="italy-bar"></div>
+
+    
+    <div class="delivery">
+            <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
+            <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
+            <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
+            <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+    </div>
+    
+
+    <script>
+        function deliveryChoice(button){
+            let curr = document.getElementById("curr-del-opt");
+            curr.removeAttribute("id");
+            button.setAttribute("id", "curr-del-opt");
+
+            const adres = document.getElementById("delivery-address");
+            const choice = button.innerText;
+
+            if (choice === "Dostawa") {
+                adres.disabled = false;
+                adres.value="";
+                adres.placeholder = "Podaj adres dostawy";
+            } else {
+                adres.disabled = true;
+                adres.value = "Kraków ul.Włoska 17";
+            }
+        }
+    </script>
+    
+    <div class="panels">
+        <a href="#" class="panel">Pizze</a>
+        <a href="#" class="panel">Desery</a>
+        <a href="#" class="panel">Napoje</a>
+        <a href="#" class="panel">Kontakt</a>
+    </div>
+
+    <div class="stopka">
+            <div id="line"></div>
+            <footer>&copy 2026 Łukasz Całka  Jakub Czerwiak </footer>
+    </div>
+
+</body>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">

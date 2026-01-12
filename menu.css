@@ -1,3 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* MENU */
+.menu {
+    background-color: #ed9788;
+    padding: 15px 0;
+    border-bottom: solid #000000 5px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 40px;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+.menu li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li.active {
+    background-color: #880016;
+}
+
+.menu li.active a {
+    color: #ffffff;   
+    font-weight: bold;
+}
+
+
+/* NAZWA */
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;        
+    background: radial-gradient(
+        circle at center,
+        #ed1b24 70%,
+        #880016 90%
+        
+    );
+    text-align: center;
+    padding: 0 20px;
+}
+
+.name h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    color: #fff;
+    letter-spacing: 2px;
+    white-space: nowrap; 
+}
+
+.subtitle {
+    text-align: center;
+    color: #ffecec;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.italy-bar {
+    height: 30px;
+    background: linear-gradient(
+        to right,
+        #009246 0%,
+        #009246 33%,
+        #ffffff 33%,
+        #ffffff 66%,
+        #ce2b37 66%,
+        #ce2b37 100%
+    );
+}
+
+/* O NAS */
+.about {
+    max-width: 800px;
+    margin: 60px auto 20px;
+    border: 2px solid #ddd;
+}
+
+
+.about-title {
+    background-color: #ed1b24;
+    padding: 6px 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-title h2 {
+    margin: 0;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.about-content {
+    padding: 30px;
+}
+
+.icon-img {
+    width: 28px;             
+    height: 28px;
+}
+
+/* PANELE */
+.panels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;   /* <-- bardzo ważne */
+}
+
+.panel {
+    width: 200px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #b22222;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.panel:hover {
+    background-color: #b22222;
+    color: white;
+}
+
+.stopka{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* DOSTAWA */
+.delivery {
+    display: flex;
+    max-width: 800px;
+    margin: 60px auto 20px;
+    border: 2px solid #ddd;
+    padding: 5px 10px 5px 10px;
+    gap: 12px;
+    text-align: center;
+}
+.delivery-option {
+    width: 120px;
+    border: 1px solid #000;
+    padding: 5px 0px 5px;
+    font-size: 20px;
+}
+#curr-del-opt {
+    background-color: #880016;
+    color: #fff;
+}
+.delivery-option:hover {
+    background-color: #ed9788;
+}
+#delivery-address {
+    resize: none;
+    width:420px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 0px 5px;
+}
+
+
 /* --- RESET I PODSTAWY --- */
 * {
     box-sizing: border-box;
