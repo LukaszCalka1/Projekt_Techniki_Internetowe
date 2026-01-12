@@ -30,14 +30,151 @@
     </header>
     <div class="italy-bar"></div>
 
-    
-    <div class="delivery">
-            <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
-            <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
-            <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
-            <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+    <div class="box">
+        <div class="delivery">
+                <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
+                <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
+                <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
+                <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+        </div>
+        <div class="koszyk">
+            <h1>KOSZYK</h1>
+            <div class="tabela">
+                <table>
+                    <tr>
+                        <td>Produkt</td>
+                        <td>Ilość</td>
+                        <td>Cena</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k1p"></div>
+                        </td>
+                        <td>
+                            <div id="k1i"></div>
+                        </td>
+                        <td>
+                            <div id="k1c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k2p"></div>
+                        </td>
+                        <td>
+                            <div id="k2i"></div>
+                        </td>
+                        <td>
+                            <div id="k2c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k3p"></div>
+                        </td>
+                        <td>
+                            <div id="k3i"></div>
+                        </td>
+                        <td>
+                            <div id="k3c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k4p"></div>
+                        </td>
+                        <td>
+                            <div id="k4i"></div>
+                        </td>
+                        <td>
+                            <div id="k4c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k5p"></div>
+                        </td>
+                        <td>
+                            <div id="k5i"></div>
+                        </td>
+                        <td>
+                            <div id="k5c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k6p"></div>
+                        </td>
+                        <td>
+                            <div id="k6i"></div>
+                        </td>
+                        <td>
+                            <div id="k6c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k7p"></div>
+                        </td>
+                        <td>
+                            <div id="k7i"></div>
+                        </td>
+                        <td>
+                            <div id="k7c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k8p"></div>
+                        </td>
+                        <td>
+                            <div id="k8i"></div>
+                        </td>
+                        <td>
+                            <div id="k8c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="k9p"></div>
+                        </td>
+                        <td>
+                            <div id="k9i"></div>
+                        </td>
+                        <td>
+                            <div id="k9c"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="kwota">Suma:</div>
+                        </td>
+                        <td>
+                            <div class="kwota" id="suma"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="hr">
+                                <div class="przycisk">Wyczyść</div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-    
+
+
+    <!-- TUTAJ JEST PUSTO POD DOSTAWA POMYSLE NAD JAKIMS "SZACOWANY CZAS DOSTAWY" W TAMTO MIEJSCE-->
 
     <script>
         function deliveryChoice(button){
@@ -63,7 +200,6 @@
         <a href="#" class="panel">Pizze</a>
         <a href="#" class="panel">Desery</a>
         <a href="#" class="panel">Napoje</a>
-        <a href="#" class="panel">Kontakt</a>
     </div>
 
     <div class="stopka">
@@ -71,22 +207,6 @@
             <footer>&copy 2026 Łukasz Całka  Jakub Czerwiak </footer>
     </div>
 
-</body>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Pizzeria Napoli</title>
-
-    <link rel="stylesheet" href="menu.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
     <div class="container">
     <div class="main">
         <div class="nag">
@@ -167,143 +287,11 @@
         </div>
         
     </div>
-    <div class="koszyk">
-        <h1>KOSZYK</h1>
-        <div class="tabela">
-            <table>
-                <tr>
-                    <td>Produkt</td>
-                    <td>Ilość</td>
-                    <td>Cena</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k1p"></div>
-                    </td>
-                    <td>
-                        <div id="k1i"></div>
-                    </td>
-                    <td>
-                        <div id="k1c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k2p"></div>
-                    </td>
-                    <td>
-                        <div id="k2i"></div>
-                    </td>
-                    <td>
-                        <div id="k2c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k3p"></div>
-                    </td>
-                    <td>
-                        <div id="k3i"></div>
-                    </td>
-                    <td>
-                        <div id="k3c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k4p"></div>
-                    </td>
-                    <td>
-                        <div id="k4i"></div>
-                    </td>
-                    <td>
-                        <div id="k4c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k5p"></div>
-                    </td>
-                    <td>
-                        <div id="k5i"></div>
-                    </td>
-                    <td>
-                        <div id="k5c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k6p"></div>
-                    </td>
-                    <td>
-                        <div id="k6i"></div>
-                    </td>
-                    <td>
-                        <div id="k6c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k7p"></div>
-                    </td>
-                    <td>
-                        <div id="k7i"></div>
-                    </td>
-                    <td>
-                        <div id="k7c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k8p"></div>
-                    </td>
-                    <td>
-                        <div id="k8i"></div>
-                    </td>
-                    <td>
-                        <div id="k8c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="k9p"></div>
-                    </td>
-                    <td>
-                        <div id="k9i"></div>
-                    </td>
-                    <td>
-                        <div id="k9c"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <div class="kwota">Suma:</div>
-                    </td>
-                    <td>
-                        <div class="kwota" id="suma"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="hr">
-                            <div class="reset">Wyczyść</div>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
+
 
 <script src="menu.js"></script>
+
+
 
 </body>
 
