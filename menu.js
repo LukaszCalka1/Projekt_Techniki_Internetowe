@@ -110,10 +110,13 @@
                     suma = suma + 40;
                 }
                 mar_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = mar;
-                document.getElementById("k" + licznik + "i").innerHTML = mar_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = mar_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(mar)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(mar_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(mar_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
                 mar_pozycja = licznik;
                 licznik++;
             } else {
@@ -125,10 +128,10 @@
                     suma = suma + 40;
                 }
                 mar_ilosc++;
-                document.getElementById("k" + mar_pozycja + "p").innerHTML = mar;
-                document.getElementById("k" + mar_pozycja + "i").innerHTML = mar_ilosc;
-                document.getElementById("k" + mar_pozycja + "c").innerHTML = mar_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(mar)
+                $("#k" + licznik + "i").text(mar_ilosc)
+                $("#k" + licznik + "c").text(mar_cena)
+                $("#suma").text(suma);
             }
         });
         document.querySelector(".pep").addEventListener("click", function () {
@@ -141,10 +144,13 @@
                     suma = suma + 42;
                 }
                 pep_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = pep;
-                document.getElementById("k" + licznik + "i").innerHTML = pep_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = pep_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(pep)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(pep_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(pep_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 pep_pozycja = licznik;
                 licznik++;
@@ -157,10 +163,10 @@
                     suma = suma + 42;
                 }
                 pep_ilosc++;
-                document.getElementById("k" + pep_pozycja + "p").innerHTML = pep;
-                document.getElementById("k" + pep_pozycja + "i").innerHTML = pep_ilosc;
-                document.getElementById("k" + pep_pozycja + "c").innerHTML = pep_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(pep)
+                $("#k" + licznik + "i").text(pep_ilosc)
+                $("#k" + licznik + "c").text(pep_cena)
+                $("#suma").text(suma);
             }
         });
 
@@ -174,10 +180,13 @@
                     suma = suma + 45;
                 }
                 cap_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = cap;
-                document.getElementById("k" + licznik + "i").innerHTML = cap_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = cap_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(cap)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(cap_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(cap_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 cap_pozycja = licznik;
                 licznik++;
@@ -190,10 +199,10 @@
                     suma = suma + 45;
                 }
                 cap_ilosc++;
-                document.getElementById("k" + cap_pozycja + "p").innerHTML = cap;
-                document.getElementById("k" + cap_pozycja + "i").innerHTML = cap_ilosc;
-                document.getElementById("k" + cap_pozycja + "c").innerHTML = cap_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(cap)
+                $("#k" + licznik + "i").text(cap_ilosc)
+                $("#k" + licznik + "c").text(cap_cena)
+                $("#suma").text(suma);
             }
         });
         document.querySelector(".gre").addEventListener("click", function () {
@@ -206,10 +215,13 @@
                     suma = suma + 46;
                 }
                 gre_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = gre;
-                document.getElementById("k" + licznik + "i").innerHTML = gre_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = gre_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(gre)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(gre_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(gre_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 gre_pozycja = licznik;
                 licznik++;
@@ -222,10 +234,10 @@
                     suma = suma + 46;
                 }
                 gre_ilosc++;
-                document.getElementById("k" + gre_pozycja + "p").innerHTML = gre;
-                document.getElementById("k" + gre_pozycja + "i").innerHTML = gre_ilosc;
-                document.getElementById("k" + gre_pozycja + "c").innerHTML = gre_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(gre)
+                $("#k" + licznik + "i").text(gre_ilosc)
+                $("#k" + licznik + "c").text(gre_cena)
+                $("#suma").text(suma);
             }
         });
         document.querySelector(".kur").addEventListener("click", function () {
@@ -238,10 +250,13 @@
                     suma = suma + 47;
                 }
                 kur_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = kur;
-                document.getElementById("k" + licznik + "i").innerHTML = kur_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = kur_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(kur)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(kur_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(kur_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 kur_pozycja = licznik;
                 licznik++;
@@ -254,10 +269,10 @@
                     suma = suma + 47;
                 }
                 kur_ilosc++;
-                document.getElementById("k" + kur_pozycja + "p").innerHTML = kur;
-                document.getElementById("k" + kur_pozycja + "i").innerHTML = kur_ilosc;
-                document.getElementById("k" + kur_pozycja + "c").innerHTML = kur_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(kur)
+                $("#k" + licznik + "i").text(kur_ilosc)
+                $("#k" + licznik + "c").text(kur_cena)
+                $("#suma").text(suma);
             }
         });
         document.querySelector(".rol").addEventListener("click", function () {
@@ -265,10 +280,13 @@
                 rol_cena = 9;
                 suma = suma + 9;
                 rol_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = rol;
-                document.getElementById("k" + licznik + "i").innerHTML = rol_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = rol_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(rol)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(rol_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(rol_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 rol_pozycja = licznik;
                 licznik++;
@@ -276,10 +294,10 @@
                 rol_cena = rol_cena + 9;
                 suma = suma + 9;
                 rol_ilosc++;
-                document.getElementById("k" + rol_pozycja + "p").innerHTML = rol;
-                document.getElementById("k" + rol_pozycja + "i").innerHTML = rol_ilosc;
-                document.getElementById("k" + rol_pozycja + "c").innerHTML = rol_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(rol)
+                $("#k" + licznik + "i").text(rol_ilosc)
+                $("#k" + licznik + "c").text(rol_cena)
+                $("#suma").text(suma);
             }
         });
         document.querySelector(".pie").addEventListener("click", function () {
@@ -287,10 +305,13 @@
                 pie_cena = 8;
                 suma = suma + 8;
                 pie_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = pie;
-                document.getElementById("k" + licznik + "i").innerHTML = pie_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = pie_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(pie)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(pie_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(pie_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 pie_pozycja = licznik;
                 licznik++;
@@ -298,10 +319,10 @@
                 pie_cena = pie_cena + 8;
                 suma = suma + 8;
                 pie_ilosc++;
-                document.getElementById("k" + pie_pozycja + "p").innerHTML = pie;
-                document.getElementById("k" + pie_pozycja + "i").innerHTML = pie_ilosc;
-                document.getElementById("k" + pie_pozycja + "c").innerHTML = pie_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(pie)
+                $("#k" + licznik + "i").text(pie_ilosc)
+                $("#k" + licznik + "c").text(pie_cena)
+                $("#suma").text(suma);
             }
         });
         document.querySelector(".pepsi").addEventListener("click", function () {
@@ -309,10 +330,13 @@
                 pepsi_cena = 7;
                 suma = suma + 7;
                 pepsi_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = pepsi;
-                document.getElementById("k" + licznik + "i").innerHTML = pepsi_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = pepsi_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(pepsi)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(pepsi_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(pepsi_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 pepsi_pozycja = licznik;
                 licznik++;
@@ -320,10 +344,11 @@
                 pepsi_cena = pepsi_cena + 7;
                 suma = suma + 7;
                 pepsi_ilosc++;
-                document.getElementById("k" + pepsi_pozycja + "p").innerHTML = pepsi;
-                document.getElementById("k" + pepsi_pozycja + "i").innerHTML = pepsi_ilosc;
-                document.getElementById("k" + pepsi_pozycja + "c").innerHTML = pepsi_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(pepsi)
+                $("#k" + licznik + "i").text(pepsi_ilosc)
+                $("#k" + licznik + "c").text(pepsi_cena)
+                $("#suma").text(suma);
+
             }
         });
         document.querySelector(".up").addEventListener("click", function () {
@@ -331,10 +356,13 @@
                 up_cena = 7;
                 suma = suma + 7;
                 up_ilosc++;
-                document.getElementById("k" + licznik + "p").innerHTML = up;
-                document.getElementById("k" + licznik + "i").innerHTML = up_ilosc;
-                document.getElementById("k" + licznik + "c").innerHTML = up_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(up)
+                $("#k" + licznik + "p").addClass("cart-item");
+                $("#k" + licznik + "i").text(up_ilosc)
+                $("#k" + licznik + "i").addClass("cart-item");
+                $("#k" + licznik + "c").text(up_cena)
+                $("#k" + licznik + "c").addClass("cart-item");
+                $("#suma").text(suma);
 
                 up_pozycja = licznik;
                 licznik++;
@@ -342,10 +370,10 @@
                 up_cena = up_cena + 7;
                 suma = suma + 7;
                 up_ilosc++;
-                document.getElementById("k" + up_pozycja + "p").innerHTML = up;
-                document.getElementById("k" + up_pozycja + "i").innerHTML = up_ilosc;
-                document.getElementById("k" + up_pozycja + "c").innerHTML = up_cena;
-                document.getElementById("suma").innerHTML = suma;
+                $("#k" + licznik + "p").text(up)
+                $("#k" + licznik + "i").text(up_ilosc)
+                $("#k" + licznik + "c").text(up_cena)
+                $("#suma").text(suma);
             }
         })
         document.querySelector(".przycisk").addEventListener("click", function () {
