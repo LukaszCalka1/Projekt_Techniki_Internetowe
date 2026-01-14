@@ -32,11 +32,16 @@
     <div class="italy-bar"></div>
 
     <div class="box">
-        <div class="delivery">
-                <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
-                <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
-                <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
-                <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+        <div class="small-box">
+            <div class="delivery">
+                    <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
+                    <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
+                    <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
+                    <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+            </div>
+            <div class="delivery-info">
+                <p>Szacowany czas dostawy <span id="delivery-time">-</span> minut</p>
+            </div>
         </div>
         <div class="koszyk">
             <h1>KOSZYK</h1>
@@ -175,26 +180,8 @@
     </div>
 
 
-    <!-- TUTAJ JEST PUSTO POD DOSTAWA POMYSLE NAD JAKIMS "SZACOWANY CZAS DOSTAWY" W TAMTO MIEJSCE-->
-
     <script>
-        function deliveryChoice(button){
-            let curr = document.getElementById("curr-del-opt");
-            curr.removeAttribute("id");
-            button.setAttribute("id", "curr-del-opt");
-
-            const adres = document.getElementById("delivery-address");
-            const choice = button.innerText;
-
-            if (choice === "Dostawa") {
-                adres.disabled = false;
-                adres.value="";
-                adres.placeholder = "Podaj adres dostawy";
-            } else {
-                adres.disabled = true;
-                adres.value = "Kraków ul.Włoska 17";
-            }
-        }
+       
     </script>
     
     <div class="panels">
