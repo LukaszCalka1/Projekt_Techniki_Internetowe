@@ -422,9 +422,8 @@
                 dostawa = false;
             }
             obliczCzasDostawy()
-        }
-          
-        //Obliczanie czasu dostawy
+        };
+
         function obliczCzasDostawy() {
 
             if (!dostawa) {
@@ -435,7 +434,7 @@
             let czas = 25 + 5*Math.floor(suma / 100);
             czas = Math.min(czas, 90);
 
-            $("#delivery-time").text(czas + "–" + (czas + 10) + " min");
+            $("#delivery-time").text(czas + "–" + (czas + 10) );
         };
           
         //PIZZA DNIA
@@ -454,10 +453,11 @@
             localStorage.setItem("pizzaDniaData", today);
             localStorage.setItem("pizzaDnia", todaysPizza);
             return todaysPizza;
-        }
+        };
+
         function showPizzaDnia(Id){
             const element = document.getElementById(Id)
             if (element) {
                 element.innerText = "Pizzą dnia jest: " + PizzaDnia();
             }
-        }
+        };
