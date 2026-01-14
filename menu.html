@@ -32,11 +32,16 @@
     <div class="italy-bar"></div>
 
     <div class="box">
-        <div class="delivery">
-                <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
-                <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
-                <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
-                <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+        <div class="small-box">
+            <div class="delivery">
+                    <button class="delivery-option" id="curr-del-opt" onclick="deliveryChoice(this)">Dostawa</button>
+                    <button class="delivery-option" onclick="deliveryChoice(this)">Odbiór</button>
+                    <button class="delivery-option" onclick="deliveryChoice(this)">Na miejscu</button>
+                    <textarea name="Adres" rows="1" id="delivery-address" placeholder="Podaj adres dostawy"></textarea> <!--disabled blopkuje edycje -->
+            </div>
+            <div class="delivery-info">
+                <p>Szacowany czas dostawy <span id="delivery-time">-</span> minut</p>
+            </div>
         </div>
         <div class="koszyk">
             <h1>KOSZYK</h1>

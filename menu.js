@@ -1,47 +1,49 @@
 
-        var sm = 0;
-        var sp = 0;
-        var sc = 0;
-        var sg = 0;
-        var sk = 0;
-        var licznik = 1;
-        var suma = 0;
-        var mar = "Margherita"
-        var mar_pozycja = 0;
-        var mar_ilosc = 0;
-        var mar_cena = 0;
-        var pep = "Pepperoni"
-        var pep_pozycja = 0;
-        var pep_ilosc = 0;
-        var pep_cena = 0;
-        var cap = "Capricciosa"
-        var cap_pozycja = 0;
-        var cap_ilosc = 0;
-        var cap_cena = 0;
-        var gre = "Grecka"
-        var gre_pozycja = 0;
-        var gre_ilosc = 0;
-        var gre_cena = 0;
-        var kur = "Kurczak"
-        var kur_pozycja = 0;
-        var kur_ilosc = 0;
-        var kur_cena = 0;
-        var rol = "Rolsy"
-        var rol_pozycja = 0;
-        var rol_ilosc = 0;
-        var rol_cena = 0;
-        var pie = "Pieczywo"
-        var pie_pozycja = 0;
-        var pie_ilosc = 0;
-        var pie_cena = 0;
-        var pepsi = "Pepsi 0.3l"
-        var pepsi_pozycja = 0;
-        var pepsi_ilosc = 0;
-        var pepsi_cena = 0;
-        var up = "7up 0.3l"
-        var up_pozycja = 0;
-        var up_ilosc = 0;
-        var up_cena = 0;
+        let sm = 0;
+        let sp = 0;
+        let sc = 0;
+        let sg = 0;
+        let sk = 0;
+        let licznik = 1;
+        let suma = 0;
+        let mar = "Margherita"
+        let mar_pozycja = 0;
+        let mar_ilosc = 0;
+        let mar_cena = 0;
+        let pep = "Pepperoni"
+        let pep_pozycja = 0;
+        let pep_ilosc = 0;
+        let pep_cena = 0;
+        let cap = "Capricciosa"
+        let cap_pozycja = 0;
+        let cap_ilosc = 0;
+        let cap_cena = 0;
+        let gre = "Grecka"
+        let gre_pozycja = 0;
+        let gre_ilosc = 0;
+        let gre_cena = 0;
+        let kur = "Kurczak"
+        let kur_pozycja = 0;
+        let kur_ilosc = 0;
+        let kur_cena = 0;
+        let rol = "Rolsy"
+        let rol_pozycja = 0;
+        let rol_ilosc = 0;
+        let rol_cena = 0;
+        let pie = "Pieczywo"
+        let pie_pozycja = 0;
+        let pie_ilosc = 0;
+        let pie_cena = 0;
+        let pepsi = "Pepsi 0.3l"
+        let pepsi_pozycja = 0;
+        let pepsi_ilosc = 0;
+        let pepsi_cena = 0;
+        let up = "7up 0.3l"
+        let up_pozycja = 0;
+        let up_ilosc = 0;
+        let up_cena = 0;
+        let czas = 25;
+        let dostawa = true;
 
 
         document.querySelector(".ser_mar").addEventListener("click", function () {
@@ -117,6 +119,8 @@
                 $("#k" + licznik + "c").text(mar_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
+
                 mar_pozycja = licznik;
                 licznik++;
             } else {
@@ -128,10 +132,11 @@
                     suma = suma + 40;
                 }
                 mar_ilosc++;
-                $("#k" + licznik + "p").text(mar)
-                $("#k" + licznik + "i").text(mar_ilosc)
-                $("#k" + licznik + "c").text(mar_cena)
+                $("#k" + mar_pozycja + "p").text(mar)
+                $("#k" + mar_pozycja + "i").text(mar_ilosc)
+                $("#k" + mar_pozycja + "c").text(mar_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
         document.querySelector(".pep").addEventListener("click", function () {
@@ -151,6 +156,7 @@
                 $("#k" + licznik + "c").text(pep_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 pep_pozycja = licznik;
                 licznik++;
@@ -163,10 +169,11 @@
                     suma = suma + 42;
                 }
                 pep_ilosc++;
-                $("#k" + licznik + "p").text(pep)
-                $("#k" + licznik + "i").text(pep_ilosc)
-                $("#k" + licznik + "c").text(pep_cena)
+                $("#k" + pep_pozycja + "p").text(pep)
+                $("#k" + pep_pozycja + "i").text(pep_ilosc)
+                $("#k" + pep_pozycja + "c").text(pep_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
 
@@ -187,6 +194,7 @@
                 $("#k" + licznik + "c").text(cap_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 cap_pozycja = licznik;
                 licznik++;
@@ -199,10 +207,11 @@
                     suma = suma + 45;
                 }
                 cap_ilosc++;
-                $("#k" + licznik + "p").text(cap)
-                $("#k" + licznik + "i").text(cap_ilosc)
-                $("#k" + licznik + "c").text(cap_cena)
+                $("#k" + cap_pozycja + "p").text(cap)
+                $("#k" + cap_pozycja + "i").text(cap_ilosc)
+                $("#k" + cap_pozycja + "c").text(cap_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
         document.querySelector(".gre").addEventListener("click", function () {
@@ -222,6 +231,7 @@
                 $("#k" + licznik + "c").text(gre_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 gre_pozycja = licznik;
                 licznik++;
@@ -234,10 +244,11 @@
                     suma = suma + 46;
                 }
                 gre_ilosc++;
-                $("#k" + licznik + "p").text(gre)
-                $("#k" + licznik + "i").text(gre_ilosc)
-                $("#k" + licznik + "c").text(gre_cena)
+                $("#k" + gre_pozycja + "p").text(gre)
+                $("#k" + gre_pozycja + "i").text(gre_ilosc)
+                $("#k" + gre_pozycja + "c").text(gre_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
         document.querySelector(".kur").addEventListener("click", function () {
@@ -257,6 +268,7 @@
                 $("#k" + licznik + "c").text(kur_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 kur_pozycja = licznik;
                 licznik++;
@@ -269,10 +281,11 @@
                     suma = suma + 47;
                 }
                 kur_ilosc++;
-                $("#k" + licznik + "p").text(kur)
-                $("#k" + licznik + "i").text(kur_ilosc)
-                $("#k" + licznik + "c").text(kur_cena)
+                $("#k" + kur_pozycja + "p").text(kur)
+                $("#k" + kur_pozycja + "i").text(kur_ilosc)
+                $("#k" + kur_pozycja + "c").text(kur_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
         document.querySelector(".rol").addEventListener("click", function () {
@@ -287,6 +300,7 @@
                 $("#k" + licznik + "c").text(rol_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 rol_pozycja = licznik;
                 licznik++;
@@ -294,10 +308,11 @@
                 rol_cena = rol_cena + 9;
                 suma = suma + 9;
                 rol_ilosc++;
-                $("#k" + licznik + "p").text(rol)
-                $("#k" + licznik + "i").text(rol_ilosc)
-                $("#k" + licznik + "c").text(rol_cena)
+                $("#k" + rol_pozycja + "p").text(rol)
+                $("#k" + rol_pozycja + "i").text(rol_ilosc)
+                $("#k" + rol_pozycja + "c").text(rol_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
         document.querySelector(".pie").addEventListener("click", function () {
@@ -312,6 +327,7 @@
                 $("#k" + licznik + "c").text(pie_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 pie_pozycja = licznik;
                 licznik++;
@@ -319,10 +335,11 @@
                 pie_cena = pie_cena + 8;
                 suma = suma + 8;
                 pie_ilosc++;
-                $("#k" + licznik + "p").text(pie)
-                $("#k" + licznik + "i").text(pie_ilosc)
-                $("#k" + licznik + "c").text(pie_cena)
+                $("#k" + pie_pozycja + "p").text(pie)
+                $("#k" + pie_pozycja + "i").text(pie_ilosc)
+                $("#k" + pie_pozycja + "c").text(pie_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         });
         document.querySelector(".pepsi").addEventListener("click", function () {
@@ -337,6 +354,7 @@
                 $("#k" + licznik + "c").text(pepsi_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 pepsi_pozycja = licznik;
                 licznik++;
@@ -344,10 +362,11 @@
                 pepsi_cena = pepsi_cena + 7;
                 suma = suma + 7;
                 pepsi_ilosc++;
-                $("#k" + licznik + "p").text(pepsi)
-                $("#k" + licznik + "i").text(pepsi_ilosc)
-                $("#k" + licznik + "c").text(pepsi_cena)
+                $("#k" + pepsi_pozycja + "p").text(pepsi)
+                $("#k" + pepsi_pozycja + "i").text(pepsi_ilosc)
+                $("#k" + pepsi_pozycja + "c").text(pepsi_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
             }
         });
@@ -363,6 +382,7 @@
                 $("#k" + licznik + "c").text(up_cena)
                 $("#k" + licznik + "c").addClass("cart-item");
                 $("#suma").text(suma);
+                obliczCzasDostawy()
 
                 up_pozycja = licznik;
                 licznik++;
@@ -370,15 +390,17 @@
                 up_cena = up_cena + 7;
                 suma = suma + 7;
                 up_ilosc++;
-                $("#k" + licznik + "p").text(up)
-                $("#k" + licznik + "i").text(up_ilosc)
-                $("#k" + licznik + "c").text(up_cena)
+                $("#k" + up_pozycja + "p").text(up)
+                $("#k" + up_pozycja + "i").text(up_ilosc)
+                $("#k" + up_pozycja + "c").text(up_cena)
                 $("#suma").text(suma);
+                obliczCzasDostawy()
             }
         })
         document.querySelector(".przycisk").addEventListener("click", function () {
             location.reload();
         });
+
 
         // WYBIERANIE DOSTAWY
         function deliveryChoice(button){
@@ -393,11 +415,29 @@
                 adres.disabled = false;
                 adres.value="";
                 adres.placeholder = "Podaj adres dostawy";
+                dostawa = true;
             } else {
                 adres.disabled = true;
                 adres.value = "Kraków ul.Włoska 17";
+                dostawa = false;
             }
+            obliczCzasDostawy()
+        }
+          
+        //Obliczanie czasu dostawy
+        function obliczCzasDostawy() {
+
+            if (!dostawa) {
+                $("#delivery-time").text("–");
+                return;
+            }
+
+            let czas = 25 + 5*Math.floor(suma / 100);
+            czas = Math.min(czas, 90);
+
+            $("#delivery-time").text(czas + "–" + (czas + 10) + " min");
         };
+          
         //PIZZA DNIA
         function PizzaDnia(){
             let pizze = ["Margherita", "Pepperoni", "Capricciosa", "Grecka", "Kurczak"];

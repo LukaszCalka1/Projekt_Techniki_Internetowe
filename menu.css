@@ -122,11 +122,32 @@
 
 /*pojemnik na dostawe i koszyk*/
 .box{
-    margin-top: 10px;
+    margin: 10px auto 3px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 5px;
+    gap: 10px;
+}
+
+.small-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.delivery-info{
+    font-size: 30px;
+    margin-top: 6px;  
+    padding: 8px 15px;
+    border-left: 4px solid #880016;
+    background-color: rgba(136, 0, 22, 0.05);
+    border-radius: 5px;
+}
+
+#delivery-time{
+    font-weight: bold;
 }
 
 .koszyk {
@@ -213,7 +234,7 @@
     display: flex;
     justify-content: center;
     gap: 0;
-    padding: 40px;
+    padding: 30px;
     flex-wrap: wrap;   
 }
 
