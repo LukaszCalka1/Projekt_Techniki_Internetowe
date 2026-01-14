@@ -286,9 +286,9 @@
 /* --- POSZCZEGÓLNE PIZZE --- */
 .pizza {
     display: flex;
-    align-items: center;
     margin-bottom: 30px;
     flex-wrap: wrap; /* na węższych ekranach obrazek + tekst przechodzą w dół */
+    width: 100%;
 }
 
 .pizza img {
@@ -296,12 +296,40 @@
     height: 150px;
     margin-right: 15px;
     border-radius: 12px;
+    align-self: center;
+}
+
+.pizza-info {
+    display:flex;
+    flex:1;
+    gap:10px;
+}
+
+.dodatki {
+    display:flex;
+    align-self: center;
+    gap:15px;
+    margin-left: auto;
+}
+
+.opis {
+    width:300px;
 }
 
 .pizza p {
     font-size: 25px;
     margin-right: 15px;
     margin-top: 5px;
+    align-self: center;
+}
+.pizza h4 {
+    align-self: top;
+    font-size: 25px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+.h {
+    margin-left:20px;
 }
 
 /* --- DODATKI / KOLOROWE KÓŁKA --- */
@@ -314,6 +342,7 @@
     margin-right: 15px;
     margin-top: 10px;
     cursor: pointer;
+    align-self: center;
 }
 
 /* --- PRZYCISKI „Dodaj do koszyka” --- */
@@ -322,12 +351,12 @@
     border-radius: 12px;
     font-size: 25px;
     width: 185px;
-    height: 30px;
+    height: 100px;
     background-color: white;
     border: 2px solid black;
     margin-top: 10px;
     display: flex;
-    align-items: center;
+    align-self: flex-end;
     justify-content: center;
     cursor: pointer;
 }
