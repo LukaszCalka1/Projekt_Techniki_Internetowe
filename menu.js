@@ -402,6 +402,7 @@
         });
 
 
+        // WYBIERANIE DOSTAWY
         function deliveryChoice(button){
             let curr = document.getElementById("curr-del-opt");
             curr.removeAttribute("id");
@@ -422,7 +423,8 @@
             }
             obliczCzasDostawy()
         }
-
+          
+        //Obliczanie czasu dostawy
         function obliczCzasDostawy() {
 
             if (!dostawa) {
@@ -434,4 +436,28 @@
             czas = Math.min(czas, 90);
 
             $("#delivery-time").text(czas + "–" + (czas + 10) + " min");
+        };
+          
+        //PIZZA DNIA
+        function PizzaDnia(){
+            let pizze = ["Margherita", "Pepperoni", "Capricciosa", "Grecka", "Kurczak"];
+            const today = new Date().toISOString().split('T')[0];
+            const savedDate = localStorage.getItem("pizzaDniaData");
+            const savedPizza = localStorage.getItem("pizzaDnia");
+
+            if (savedDate===today && savedPizza)
+                return savedPizza
+
+            const idxRand = Math.floor(Math.random() * pizze.length);
+            const todaysPizza = pizze[idxRand];
+
+            localStorage.setItem("pizzaDniaData", today);
+            localStorage.setItem("pizzaDnia", todaysPizza);
+            return todaysPizza;
+        }
+        function showPizzaDnia(Id){
+            const element = document.getElementById(Id)
+            if (element) {
+                element.innerText = "Pizzą dnia jest: " + PizzaDnia();
+            }
         }
