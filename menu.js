@@ -380,3 +380,44 @@
             location.reload();
         });
 
+        // WYBIERANIE DOSTAWY
+        function deliveryChoice(button){
+            let curr = document.getElementById("curr-del-opt");
+            curr.removeAttribute("id");
+            button.setAttribute("id", "curr-del-opt");
+
+            const adres = document.getElementById("delivery-address");
+            const choice = button.innerText;
+
+            if (choice === "Dostawa") {
+                adres.disabled = false;
+                adres.value="";
+                adres.placeholder = "Podaj adres dostawy";
+            } else {
+                adres.disabled = true;
+                adres.value = "Kraków ul.Włoska 17";
+            }
+        };
+        //PIZZA DNIA
+        function PizzaDnia(){
+            let pizze = ["Margherita", "Pepperoni", "Capricciosa", "Grecka", "Kurczak"];
+            const today = new Date().toISOString().split('T')[0];
+            const savedDate = localStorage.getItem("pizzaDniaData");
+            const savedPizza = localStorage.getItem("pizzaDnia");
+
+            if (savedDate===today && savedPizza)
+                return savedPizza
+
+            const idxRand = Math.floor(Math.random() * pizze.length);
+            const todaysPizza = pizze[idxRand];
+
+            localStorage.setItem("pizzaDniaData", today);
+            localStorage.setItem("pizzaDnia", todaysPizza);
+            return todaysPizza;
+        }
+        function showPizzaDnia(Id){
+            const element = document.getElementById(Id)
+            if (element) {
+                element.innerText = "Pizzą dnia jest: " + PizzaDnia();
+            }
+        }
