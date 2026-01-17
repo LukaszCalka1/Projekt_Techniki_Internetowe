@@ -284,7 +284,8 @@
 /* --- MENU / GŁÓWNY OBSZAR --- */
 .main {
     flex: 1 1 70%;             /* 70% szerokości, ale może się zmniejszać */
-    background-color: rgb(255, 136, 156);
+    border-left: 4px solid #880016;
+    background-color: rgba(136, 0, 22, 0.05);
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -353,6 +354,10 @@
 }
 .h {
     margin-left:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* --- DODATKI / KOLOROWE KÓŁKA --- */
@@ -365,12 +370,10 @@
     margin-right: 15px;
     margin-top: 10px;
     cursor: pointer;
-    align-self: center;
 }
 
 /* --- PRZYCISKI „Dodaj do koszyka” --- */
-.mar, .pep, .cap, .gre, .kur, .rol, .pie, .pepsi, .up {
-    padding-left: 3px;
+.cart {
     border-radius: 12px;
     font-size: 25px;
     width: 185px;
@@ -378,14 +381,18 @@
     background-color: white;
     border: 2px solid black;
     margin-top: 10px;
-    display: flex;
-    align-self: flex-end;
     justify-content: center;
-    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+
 .h:hover div {
-    background-color: #faa02a;
+    background-color: #880016;
 }
 
 @media only screen and (max-width: 1120px) {
@@ -399,8 +406,33 @@
     #delivery-address{
         font-size: 18px;
     }
+
+    .pizza p{
+        font-size: 20px;
+    }
+
+    .cart{
+        font-size: 20px;
+    }
+
+    .opis {
+        width:200px;
+    }
 }   
 
+@media only screen and (max-width: 1000px){
+    .pizza p{
+        font-size: 16px;
+    }
+
+    .cart{
+        font-size: 16px;
+    }
+
+    .opis {
+        width:160px;
+    }
+}
 
 
 
@@ -463,7 +495,43 @@
         border-bottom: 2px solid #880016;
     }
 
+    .opis {
+        width:120px;
+    }
+
+    .cart{
+        width: 65px;
+        height: 70px;
+    }
     
+    .pizza-info{
+        gap: 5px;
+    }
+
+    .pizza img{
+        width: 90px;
+        height: 90px;
+    }
+
+    .pizza h4{
+        font-size: 19px;
+    }
+
+    .pizza p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 620px){
+    .h{
+        width: 400px;
+        align-items: flex-start;
+        margin: 0;
+    }
+    .cart{
+        width: 100px;
+        height: 40px;
+    }
 }
 
 
@@ -491,6 +559,23 @@
      }
 
 
+}
+
+@media only screen and (max-width: 515px){
+    .pizza img{
+        order: 2;
+        margin: 5px 100px 5px 0;
+        
+    }
+    
+    .pizza-info{
+        order: 1;
+    }
+
+    .h{
+        order: 3;
+    }
+    
 }
 
 @media only screen and (max-width: 460px){
