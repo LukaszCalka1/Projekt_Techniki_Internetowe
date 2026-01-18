@@ -9,6 +9,8 @@
     background-color: #ed9788;
     padding: 15px 0;
     border-bottom: solid #000000 5px;
+    position: sticky;  
+    top: 0;
 }
 
 .menu ul {
