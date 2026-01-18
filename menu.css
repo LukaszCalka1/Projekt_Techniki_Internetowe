@@ -336,10 +336,6 @@
     margin-left: auto;
 }
 
-.opis {
-    width:300px;
-}
-
 .pizza p {
     font-size: 25px;
     margin-right: 15px;
@@ -352,6 +348,11 @@
     margin-right: 15px;
     margin-top: 5px;
 }
+
+.opis {
+    width:300px;
+}
+
 .h {
     margin-left:20px;
     display: flex;
@@ -393,6 +394,33 @@
 
 .h:hover div {
     background-color: #880016;
+}
+
+/* --- PIZZA DNIA --- */
+.PDbox {
+    background-color: rgba(136, 0, 22, 0.05);
+    margin: 20px;
+    border-left: 4px solid #880016;
+    border-right: 4px solid #880016;
+    border-radius: 20px;
+    padding-left: 20px;
+    width:55%;
+    
+}
+#Pizza-dnia {
+    display: flex;
+    height:220px;   
+    
+}
+#Pizza-dnia img{
+    width: 200px;
+    height:200px;
+    align-self: center;
+    margin-right: 10px;
+}
+#Pizza-dnia h4{
+    font-size: 30px;
+    margin-top:10px;
 }
 
 @media only screen and (max-width: 1120px) {
