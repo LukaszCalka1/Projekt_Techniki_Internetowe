@@ -2,4 +2,4 @@
 
 Strona pizzeri napisana w HTML+CSS wraz z implementacją koszyka w JavaScript
 
-Autorzy: 
+Autorzy: https://github.com/LukaszCalka1   https://github.com/Czerferno
